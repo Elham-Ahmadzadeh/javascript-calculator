@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -66,36 +67,20 @@ main {
   color: rgb(182, 178, 178);
 }
 .loan-slider {
-  background: linear-gradient(to right, #82cfd0 0%,  #82cfd0 50%, #fff 50%, #fff 100%);
-  -webkit-appearance: none;
-  border: solid 1px #82cfd0;
-  width: 100%;
-  height: 35px;
-  appearance: none;
-  outline: none;
   border-radius: 8px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-transition: background 450ms ease-in;
-  transition: background 450ms ease-in;
-}
-
-.loan-slider::-webkit-slider-thumb {
- margin-top: -7px;
-  background-color: orange;
-    border: solid 12px gold;
-    height: 50px;
-    width: 50px;
-    -webkit-appearance: none;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  appearance: none;
+  height: 30px;
+  width: 100%;
+  outline: none;
   -webkit-appearance: none;
+  background: linear-gradient(to right, #6b1fae 0%, #6b1fae, #DEE2E6 , #DEE2E6 100%);
+}
+.loan-slider::-webkit-slider-thumb {
+  width: 45px;
+  -webkit-appearance: none;
+  height: 45px;
+  background: #6b1fae;
+  border: 1px white solid;
+  border-radius: 50%;
 }
 .loan-slider::-webkit-slider-runnable-track {
   box-shadow: none;

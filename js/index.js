@@ -14,20 +14,19 @@ amountSlider.addEventListener('input', showAmountValue, false)
 function showAmountValue() {
   loanAmount.innerHTML =  parseInt(amountSlider.value).toLocaleString('fr-FR')
   calculateMonthyCost()
-
  amountSlider.oninput = function() {
-  var value = (this.value-this.min)/(this.max-this.min)*100
-  this.style.background = 'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' + value + '%, #fff ' + value + '%, white 100%)'
+  this.style.background =  `linear-gradient(to right, #6b1fae 0%, #6b1fae ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 100%)`
 };
-
 }
-console.log(typeof(loanAmount.textContent))
 periodSlider.addEventListener('input', showPeriodValue, false)
 function showPeriodValue() {
   loanPeriod.textContent = parseInt(periodSlider.value)
   let bulletPosition = (periodSlider.value / periodSlider.max);
   loanPeriod.style.left = (bulletPosition * 7) + "em";
   calculateMonthyCost()
+  periodSlider.oninput = function() {
+    this.style.background =  `linear-gradient(to right, #6b1fae 0%, #6b1fae ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 ${(this.value-this.min)/(this.max-this.min)*100}%, #DEE2E6 100%)`
+  };
 }
 
 function calculateMonthyCost() {
