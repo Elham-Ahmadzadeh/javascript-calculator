@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loan calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main>
+    <article class="loan-box">
+      <header class="month-cost">
+        <h1>LåneKalkyl</h1>
+        <div id="cost-box">
+        <p id="cost">rrrr</p>
+        </div>
+      </header>
+      <div class="row-box">
+        <label>Lånebelopp</label>
+      </div>
+      <div class="field">
+        <output id="loanAmount"  for="amountSlider"></output>
+        <input id="amountSlider" value="0" class="loan-slider" type="range" min="20000" max="200000" step="10000"/>
+        <span class="right">200 000 kr</span>
+      </div>
+
+      <article class="loan-box">
+        <div class="row-box">
+          <label>Lånetid </label>
+        </div>
+        <div class="field">
+          <output id="loanPeriod"  for="periodSlider"></output>
+          <input id="periodSlider" value="0" class="loan-slider" type="range" min="2" max="10" step="1" />
+          <span class="right">10 år</span>
+        </div>
+
+      </article>
+
+      <div class="button-wrapper">
+        <button class="calculate-button">Till ansökan</button>
+      </div>
+    </article>
+  </main>
+
+</body>
+<script src="js/index.js"></script>
+
+</html>
+<!--
+ .loan-slider::-moz-range-track
+
+.loan-slider::-moz-range-progress -->
