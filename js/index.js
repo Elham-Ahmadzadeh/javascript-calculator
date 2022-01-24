@@ -5,14 +5,20 @@ let loanAmount = document.getElementById('loanAmount')
 let loanPeriod = document.getElementById('loanPeriod')
 let monthyCost = document.querySelector('#cost')
 let applyButton = document.querySelector('button')
+const min = amountSlider.min
+const max = amountSlider.max
+const value = amountSlider.value
 loanAmount.textContent = parseInt(amountSlider.value)
 loanPeriod.textContent = parseInt(periodSlider.value)
 amountSlider.addEventListener('input', showAmountValue, false)
 function showAmountValue() {
   loanAmount.innerHTML =  parseInt(amountSlider.value).toLocaleString('fr-FR')
-  let bulletPosition = (amountSlider.value / amountSlider.max)
-    loanAmount.style.left = (bulletPosition * 6) + "em";
   calculateMonthyCost()
+
+ amountSlider.oninput = function() {
+  this.style.background = 'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' + value + '%, #fff ' + value + '%, white 100%)'
+};
+
 }
 console.log(typeof(loanAmount.textContent))
 periodSlider.addEventListener('input', showPeriodValue, false)

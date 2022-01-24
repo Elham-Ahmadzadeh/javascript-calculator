@@ -66,42 +66,42 @@ main {
   color: rgb(182, 178, 178);
 }
 .loan-slider {
+  background: linear-gradient(to right, #82cfd0 0%,  #82cfd0 50%, #fff 50%, #fff 100%);
   -webkit-appearance: none;
-  width: 95%;
-  height: 7px;
+  border: solid 1px #82cfd0;
+  width: 100%;
+  height: 35px;
   appearance: none;
   outline: none;
-  border-radius: 3px;
-  background: transparent;
+  border-radius: 8px;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
 }
 
 .loan-slider::-webkit-slider-thumb {
-  margin-top: -7px;
-  background: rgb(16, 213, 194);
-  width: 48px;
-  height: 48px;
-  z-index: 3;
-  border: 0;
+ margin-top: -7px;
+  background-color: orange;
+    border: solid 12px gold;
+    height: 50px;
+    width: 50px;
+    -webkit-appearance: none;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
   -webkit-transform: scale(1);
   transform: scale(1);
   appearance: none;
   -webkit-appearance: none;
 }
 .loan-slider::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  border-radius: 3px;
+  box-shadow: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
   cursor: pointer;
 }
 .loan-slider:focus {
@@ -121,30 +121,26 @@ main {
   box-shadow: none;
   transform: scale(1);
 }
-
-.loan-slider:-moz-focusring {
-  outline-offset: -1px;
-}
 .loan-slider::-ms-track {
   width: 100%;
   height: 4px;
   border-radius: 3px;
   cursor: pointer;
-  background: transparent;
-  border-color: transparent;
   border-width: 14px 0;
   color: transparent;
 }
 .loan-slider::-ms-fill-lower {
   width: 100%;
   height: 6px;
-  border-radius: 3px;
+  border-radius: 10px;
+  background: #6b1fae;
   cursor: pointer;
 }
 .loan-slider::-ms-fill-upper {
   width: 100%;
   height: 6px;
-  border-radius: 3px;
+  border-radius: 10px;
+  border: 1px solid rgb(182, 178, 178);
   cursor: pointer;
 }
 .loan-slider::-ms-thumb {
@@ -155,6 +151,7 @@ main {
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
+  background: #6b1fae;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   box-shadow: none;
@@ -169,12 +166,16 @@ main {
 .loan-slider:hover::-ms-thumb {
   transform: scale(1.5);
 }
+
 .loan-slider:focus::-moz-range-thumb,
 .loan-slider:focus::-ms-thumb,
 .loan-slider:focus::-webkit-slider-thumb {
   transform: scale(1.4);
+  outline-offset: 0.125rem;
 }
-
+.loan-slider:-moz-focusring {
+  outline-offset: -1px;
+}
 .loan-slider::-moz-range-thumb {
   width: 50px;
   height: 50px;
@@ -246,12 +247,12 @@ z-index: 1;
   padding: 10px 20px;
   color: #03e9f4;
   border-radius: 5px;
-  border: 1px solid #03e9f4;
+
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 4px;
-  background: #243b55;
+  background: #43B69A;
 }
 .calculate-button:hover {
   background-color: black;
