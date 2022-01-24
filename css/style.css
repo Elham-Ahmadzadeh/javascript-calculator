@@ -31,6 +31,8 @@ main {
   height: 100%;
   width: 100%;
   padding: 20px 6px;
+  display: flex;
+  justify-content: space-between;
 
 }
 #loanAmount,
@@ -65,7 +67,7 @@ main {
 }
 .loan-slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 95%;
   height: 7px;
   appearance: none;
   outline: none;
@@ -74,6 +76,33 @@ main {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+}
+
+.loan-slider::-webkit-slider-thumb {
+  margin-top: -7px;
+  background: rgb(16, 213, 194);
+  width: 48px;
+  height: 48px;
+  z-index: 3;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.loan-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 .loan-slider:focus {
   outline: none;
@@ -106,7 +135,18 @@ main {
   border-width: 14px 0;
   color: transparent;
 }
-
+.loan-slider::-ms-fill-lower {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.loan-slider::-ms-fill-upper {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
 .loan-slider::-ms-thumb {
   margin-top: -7px;
   width: 20px;
@@ -121,6 +161,20 @@ main {
   transform: scale(1);
   margin-top: 0;
 }
+.loan-slider:active::-webkit-slider-thumb {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.loan-slider:hover::-ms-thumb {
+  transform: scale(1.5);
+}
+.loan-slider:focus::-moz-range-thumb,
+.loan-slider:focus::-ms-thumb,
+.loan-slider:focus::-webkit-slider-thumb {
+  transform: scale(1.4);
+}
+
 .loan-slider::-moz-range-thumb {
   width: 50px;
   height: 50px;
@@ -190,19 +244,19 @@ z-index: 1;
 }
 .calculate-button {
   padding: 10px 20px;
-  color: #fff;
+  color: #03e9f4;
   border-radius: 5px;
+  border: 1px solid #03e9f4;
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 4px;
-  border: none;
-  background: rgb(8, 197, 71);
+  background: #243b55;
 }
 .calculate-button:hover {
   background-color: black;
   border: #fff 1px solid;
-
+  color: #fff;
 }
 @keyframes container-entry {
   0% {
