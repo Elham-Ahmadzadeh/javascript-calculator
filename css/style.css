@@ -32,6 +32,7 @@ main {
   padding: 20px 6px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .loan-box {
   position: relative;

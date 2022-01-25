@@ -16,7 +16,7 @@ function showAmountValue() {
   calculateMonthyCost()
   loanAmount.textContent = amountSlider.value
   let bulletPosition = amountSlider.value / amountSlider.max
-  loanAmount.style.left = bulletPosition * 4 + 'em'
+  loanAmount.style.left = bulletPosition * 5.6 + 'em'
   amountSlider.oninput = function () {
     this.style.background = `linear-gradient(to right, #6b1fae 0%, #6b1fae ${
       ((this.value - this.min) / (this.max - this.min)) * 100
