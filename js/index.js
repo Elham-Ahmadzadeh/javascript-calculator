@@ -16,7 +16,7 @@ function showAmountValue() {
   calculateMonthyCost()
   loanAmount.textContent = amountSlider.value
   let bulletPosition = amountSlider.value / amountSlider.max
-  loanAmount.style.left = bulletPosition * 40 + 'em'
+  loanAmount.style.left = bulletPosition * 4 + 'em'
   amountSlider.oninput = function () {
     this.style.background = `linear-gradient(to right, #6b1fae 0%, #6b1fae ${
       ((this.value - this.min) / (this.max - this.min)) * 100
@@ -29,7 +29,7 @@ periodSlider.addEventListener('input', showPeriodValue, false)
 function showPeriodValue() {
   loanPeriod.textContent = parseInt(periodSlider.value)
   let bulletPosition = periodSlider.value / periodSlider.max
-  loanPeriod.style.left = bulletPosition * 17 + 'em'
+  loanPeriod.style.left = bulletPosition * 7 + 'em'
   calculateMonthyCost()
   periodSlider.oninput = function () {
     this.style.background = `linear-gradient(to right, #6b1fae 0%, #6b1fae ${
