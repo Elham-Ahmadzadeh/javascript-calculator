@@ -12,9 +12,8 @@ loanAmount.textContent = parseInt(amountSlider.value)
 loanPeriod.textContent = parseInt(periodSlider.value)
 amountSlider.addEventListener('input', showAmountValue, false)
 function showAmountValue() {
-  loanAmount.innerHTML = parseInt(amountSlider.value).toLocaleString('fr-FR')
   calculateMonthyCost()
-  loanAmount.textContent = amountSlider.value
+  loanAmount.textContent = parseInt(amountSlider.value).toLocaleString('fr-FR')
   let bulletPosition = amountSlider.value / amountSlider.max
   loanAmount.style.left = bulletPosition * 5.6 + 'em'
   amountSlider.oninput = function () {
