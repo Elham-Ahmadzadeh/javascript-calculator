@@ -39,16 +39,13 @@ function showPeriodValue() {
     }%, #DEE2E6 100%)`
   }
 }
-
 function calculateMonthyCost() {
   let x =
     parseInt(amountSlider.value) *
     0.00825 *
     Math.pow(1 + 0.00825, parseInt(loanPeriod.textContent) * 12)
-
   let y = Math.pow(1 + 0.00825, parseInt(loanPeriod.textContent) * 12) - 1
   let totalAmount = x / y
-
   monthyCost.innerHTML = totalAmount.toFixed(0)
 }
 applyButton.addEventListener('click', handleClick, false)
